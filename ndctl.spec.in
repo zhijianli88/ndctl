@@ -10,17 +10,11 @@ Requires:	LNAME%{?_isa} = %{version}-%{release}
 Requires:	DAX_LNAME%{?_isa} = %{version}-%{release}
 Requires:	CXL_LNAME%{?_isa} = %{version}-%{release}
 BuildRequires:	autoconf
-%if 0%{?rhel} < 9
-BuildRequires:	asciidoc
-%define asciidoctor -Dasciidoctor=disabled
-%define libtracefs -Dlibtracefs=disabled
-%else
 BuildRequires:	rubygem-asciidoctor
 BuildRequires:	libtraceevent-devel
 BuildRequires:	libtracefs-devel
 %define asciidoctor -Dasciidoctor=enabled
 %define libtracefs -Dlibtracefs=enabled
-%endif
 BuildRequires:	xmlto
 BuildRequires:	automake
 BuildRequires:	libtool
