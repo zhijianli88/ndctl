@@ -205,8 +205,8 @@ int cmd_monitor(int argc, const char **argv, struct cxl_ctx *ctx)
 			err(&monitor, "daemon start failed\n");
 			goto out;
 		}
-		info(&monitor, "cxl monitor daemon started.\n");
 	}
+	info(&monitor, "cxl monitor started.\n");
 
 	rc = monitor_event(ctx);
 
